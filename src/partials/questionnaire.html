@@ -1,0 +1,169 @@
+<section class="questionnaire">
+  <div class="container">
+    <h1 class="questionnaire__title">Анкета</h1>
+    <form class="form">
+      <h2 class="form__title form__title--personal" id="personal">
+        Личная информация
+      </h2>
+      <div class="form__inner">
+        <div class="form__block">
+          <input class="form__field" type="text" name="Name" placeholder="ФИО" required>
+          <label>ФИО</label>
+        </div>
+
+        <select data-placeholder="Год рождения" name="Date of birth" required>
+          <option></option>
+          <option>2005</option>
+          <option>2004</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+          <option>1999</option>
+          <option>1998</option>
+          <option>1997</option>
+          <option>1996</option>
+          <option>1995</option>
+          <option>1994</option>
+          <option>1993</option>
+          <option>1992</option>
+          <option>1991</option>
+          <option>1990</option>
+          <option>1989</option>
+          <option>1988</option>
+          <option>1987</option>
+          <option>1986</option>
+          <option>1985</option>
+          <option>1984</option>
+          <option>1983</option>
+          <option>1982</option>
+          <option>1981</option>
+          <option>1980</option>
+          <option>1979</option>
+          <option>1978</option>
+          <option>1977</option>
+          <option>1976</option>
+          <option>1975</option>
+          <option>1974</option>
+          <option>1973</option>
+          <option>1972</option>
+          <option>1971</option>
+          <option>1970</option>
+          <option>1969</option>
+          <option>1968</option>
+          <option>1967</option>
+          <option>1966</option>
+          <option>1965</option>
+          <option>1964</option>
+          <option>1963</option>
+          <option>1962</option>
+          <option>1961</option>
+          <option>1960</option>
+          <option>1959</option>
+          <option>1958</option>
+          <option>1957</option>
+          <option>1956</option>
+          <option>1955</option>
+          <option>1954</option>
+          <option>1953</option>
+          <option>1952</option>
+          <option>1951</option>
+          <option>1950</option>
+        </select>
+
+        <div class="form__block">
+          <input class="form__field" type="text" name="City" placeholder="Место проживания" required>
+          <label>Место проживания</label>
+        </div>
+
+        <div class="form__block">
+          <input class="form__field" type="text" name="Skype" placeholder="Skype" required>
+          <label>Skype</label>
+        </div>
+
+        <div class="form__block">
+          <input class="form__field" type="email" name="E-mail" placeholder="E-mail" required>
+          <label>E-mail</label>
+        </div>
+      </div>
+
+      <h2 class="form__title form__title--experience" id="experience">
+        Расскажите о своем опыте
+      </h2>
+      <ul class="checkboxes">
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            БЭМ/OOCSS
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Верстаю семантично
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Webpack
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Stylus/LESS/SASS
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            ES2015/ES2016
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            jQuery
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Работаю с SVG
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Gulp/GRUNT
+          </label>
+        </li>
+        <li class="checkboxes__item">
+          <label>
+            <input type="checkbox" checked>
+            Ипользую Git
+          </label>
+        </li>
+      </ul>
+
+      <h2 class="form__title form__title--javascript" id="javascript">
+        Уровень владения JavaScript
+      </h2>
+      <input type="range" class="js-range-slider" name="my_range" value="" />
+
+      <div class="about form__inner">
+        <h2 class="form__title form__title--about" id="about">
+          Расскажите о себе
+        </h2>
+        <p class="about__text">
+          Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+        </p>
+        <label>
+          <textarea class="about__field form__field" name="Message" placeholder="Понравилась тем, что..." required></textarea>
+        </label>
+      </div>
+
+      <button class="questionnaire__btn" type="submit">Готово</button>
+    </form>
+  </div>
+</section>

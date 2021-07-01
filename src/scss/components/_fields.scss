@@ -1,0 +1,104 @@
+.form {
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 30px;
+    font-weight: 300;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icons/sprites.png");
+      left: 50%;
+      top: -45px;
+      width: 47px; 
+      height: 47px;
+      transform: translate(-50%, -50%);
+    }
+
+    &--personal::before {
+      background-position: 0 0;
+    }
+  
+    &--experience {
+      margin-bottom: 46px;
+
+      &::before {
+        background-position: -47px 0;
+      }
+    }
+
+    &--javascript {
+      margin-bottom: 70px;
+
+      &::before {
+        background-position: 0 -47px;
+      }
+    }
+
+    &--about {
+      margin-bottom: 10px;
+
+      &::before {
+        background-position: -47px -47px;
+      }
+    }
+  }
+
+  &__inner {
+    margin: 0 auto 140px;
+    max-width: 520px;
+    width: 100%;
+  }
+
+  &__block {
+    margin-bottom: 22px;
+    position: relative;
+
+    label {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 5px;
+      transform: translateX(-50%);
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-silver-chalice;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    text-align: center;
+    height: 64px;
+    padding: 0 15px;
+    outline: transparent;
+    border: 1px solid $color-mercury;
+    border-radius: 5px;
+    font-size: 24px;
+    color: $color-main;
+
+    &::placeholder {
+      color: $color-silver;
+    }
+
+    &:focus {
+      border-color: $color-chambray;
+
+      &+label {
+        display: block;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:valid {
+      &+label {
+        display: block;
+      }
+    }
+  }
+}

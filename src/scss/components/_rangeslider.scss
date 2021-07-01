@@ -1,0 +1,146 @@
+.js-range-slider {
+  margin-bottom: 153px;
+}
+
+.irs {
+  margin-bottom: 153px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+.irs--flat {
+  .irs-grid-text {
+    margin-left: 0;
+    width: 180px;
+    bottom: 51px;
+    padding: 0;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #2e211c;
+    white-space: normal;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      bottom: -22px;
+      width: 1px;
+      height: 19px;
+      background-image: url("../img/icons/vertical-line.png");
+    }
+
+    &.js-grid-text-0 {
+      text-align: center;
+      padding-left: 37px;
+
+      
+      &::before {
+        left: 78px;
+        bottom: -21px;
+      }
+    }
+
+    &.js-grid-text-1 {
+      width: 170px;
+    }
+
+    &.js-grid-text-2::before {
+      bottom: -18px;
+      height: 16px;
+    }
+
+    &.js-grid-text-3 {
+      text-align: right;
+      margin-left: -22% !important;
+
+      &::before {
+        left: 174px;
+        bottom: -12px;
+        height: 8px;
+      }  
+    }
+  }
+
+  .irs-line {
+    border-radius: 0;
+    background-image: url("../img/icons/line.png");
+    background-color: transparent;
+    height: 15px;
+    width: 100%;
+  }
+
+  .irs-bar {
+    background-image: url("../img/icons/active-line.png");
+    background-color: transparent;
+    height: 14px;
+  
+    &--single {
+      border-radius: 0;
+    }
+  }
+
+  .irs-handle {
+    top: 44px;
+    width: 23px;
+    height: 26px;
+    cursor: pointer;
+
+    & > i:first-child {
+      left: 0;
+      margin-left: 0;
+      width: 23px;
+      height: 26px;
+      background-image: url("../img/icons/switch.png");
+      background-color: transparent;
+    }
+
+    &.state_hover > i:first-child,
+    &:hover > i:first-child { 
+      background-color: transparent;
+    }
+  }
+
+  .irs-grid-pol {
+    background-color: transparent;
+  }
+}
+
+input[type=range] {
+  width: 100%;
+
+  &::-ms-track {
+    width: 100%;
+    height: 14px;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background-image: url("../img/icons/active-line.png");
+    background-color: transparent;
+    height: 14px;
+  }
+
+  &::-ms-fill-upper {
+    background-image: url("../img/icons/line.png");
+    background-color: transparent;
+    height: 15px;
+  }
+
+  &::-ms-thumb {
+    border: none;
+    width: 23px;
+    height: 26px;
+    background-image: url("../img/icons/switch.png");
+    background-color: transparent;
+  }
+
+  &:focus::-ms-fill-lower {
+    background-image: url("../img/icons/active-line.png");
+    background-color: transparent;
+    height: 14px;
+  }
+}

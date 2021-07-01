@@ -1,0 +1,23 @@
+.questionnaire {
+  padding: 194px 0 74px;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 127px;
+    font-size: 70px;
+    font-weight: 100;
+  }
+
+  &__btn {
+    padding: 15px 33px 17px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: $color-chambray;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #223a79;
+    }
+  }
+}
