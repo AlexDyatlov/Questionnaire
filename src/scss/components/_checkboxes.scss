@@ -3,6 +3,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 190px;
+
+  @include small-tablet {
+    margin-bottom: 130px;
+  }
   
   &__item {
     margin-bottom: 15px;
@@ -11,6 +15,10 @@
     width: 100%;
     text-align: left;
     color: #000000;
+
+    @include mobile {
+      font-size: 14px;
+    }
     
     label {
       cursor: pointer;

@@ -1,15 +1,24 @@
 .js-range-slider {
   margin-bottom: 153px;
+
+  @include mobile {
+    margin-bottom: 110px;
+  }
 }
 
 .irs {
   margin-bottom: 153px;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
+
+  @include mobile {
+    margin-bottom: 110px;
+  }
 }
 
 .irs--flat {
   .irs-grid-text {
+    visibility: visible !important;
     margin-left: 0;
     width: 180px;
     bottom: 51px;
@@ -43,22 +52,43 @@
 
     &.js-grid-text-1 {
       width: 170px;
+
+      @include small-tablet {
+        display: none;
+      }
     }
 
-    &.js-grid-text-2::before {
-      bottom: -18px;
-      height: 16px;
+    &.js-grid-text-2 {
+
+      @include small-tablet {
+        display: none;
+      }
+
+    &::before {
+        bottom: -18px;
+        height: 16px;
+      }
     }
 
     &.js-grid-text-3 {
       text-align: right;
-      margin-left: -22% !important;
+      margin-left: -23% !important;
+      
+      @include small-tablet {
+        margin-left: -28% !important;
+        text-align: left;
+        width: 100px;
+      }
 
       &::before {
-        left: 174px;
+        left: 180px;
         bottom: -12px;
         height: 8px;
-      }  
+
+        @include small-tablet {
+          left: 80px;
+        }
+      }
     }
   }
 

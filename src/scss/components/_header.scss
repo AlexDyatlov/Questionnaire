@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .header {
   position: fixed;
   left: 0;
@@ -7,22 +9,86 @@
   padding: 31px 0 29px;
   border-bottom: 1px solid $color-alto;
   background-color: #ffffff;
+
+  @include small-tablet {
+    border-bottom: none;
+    background-color: transparent;
+  }
 }
 
 .burger {
   display: none;
+  position: relative;
+  width: 28px;
+  height: 24px;
+  font-size: 0;
+  transition: all 0.3s ease-in-out;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &.active {
+    border-color: transparent;
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  @include small-tablet {
+    display: block;
+  }
 }
 
 .menu {
   &__list {
-    padding-left: 133px;
+    text-align: center;
+
+    @include small-tablet {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 60px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-top: 1px solid $color-alto;
+      background-color: #ffffff;
+    }
   }
 
   &__item {
     display: inline-block;
+
+    @include small-tablet {
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid $color-alto;
+    }
   
     &:not(:last-child) {
-      margin-right: 75px;
+      margin-right: 70px;
+
+      @include small-tablet {
+        margin-right: 0;
+      }
     }
   }
 
@@ -31,6 +97,11 @@
     color: $color-chambray;
     font-weight: 400;
 
+    @include small-tablet {
+      display: block;
+      padding: 10px 0;
+    }
+
     &--active {
       color: $color-main;
     }
@@ -38,5 +109,11 @@
     &:hover {
       color: $color-main;
     }
+  }
+}
+
+@media (min-width: 769px){
+  .menu__list {
+    display: block !important;
   }
 }
