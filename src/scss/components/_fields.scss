@@ -70,14 +70,15 @@
     position: relative;
 
     label {
-      display: none;
       position: absolute;
       left: 50%;
-      top: 5px;
+      top: 25px;
       transform: translateX(-50%);
       font-weight: 400;
       font-size: 14px;
       color: $color-silver-chalice;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
     }
   }
 
@@ -89,14 +90,11 @@
     outline: transparent;
     border: 1px solid $color-mercury;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     color: $color-main;
 
-    @include mobile {
-      font-size: 20px;
-    }
-
     &::placeholder {
+      font-size: 24px;
       color: $color-silver;
     }
 
@@ -104,7 +102,8 @@
       border-color: $color-chambray;
 
       &+label {
-        display: block;
+        opacity: 1;
+        top: 5px;
       }
 
       &::placeholder {
@@ -114,7 +113,8 @@
 
     &:valid {
       &+label {
-        display: block;
+        opacity: 1;
+        top: 5px;
       }
     }
   }
